@@ -5,5 +5,11 @@
 a.out
 first
 second
+touch
+mkdir
+mv
+rm
+find
+cat
 
 *.tmp
