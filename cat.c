@@ -8,7 +8,7 @@ void print_file(const char *filename)
         return;
     }
 
-    char ch;
+    int ch;
     while ((ch = fgetc(file)) != EOF) {
         putchar(ch);
     }
@@ -18,9 +18,11 @@ void print_file(const char *filename)
 
 int main(int argc, char **argv)
 {
-    if (argc == 1) {
-        printf("Usage: ./cat [FILE]...\n");
-        return 1;
+    if (argc <= 1) {
+        int ch;
+        while ((ch = fgetc(stdin)) != EOF) {
+            putchar(ch);
+        }
     }
 
     for (int i = 1; i < argc; i++) {
