@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
         if (mkdir(path, 0755) != 0) {
             perror(path);
         }
-
     }
 
     return 0;
